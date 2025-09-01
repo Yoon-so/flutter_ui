@@ -58,13 +58,18 @@ class HomeWidgets {
               children: [
                 Image.asset(
                   productModel.image,
-                  width: double.infinity, height: 150,
+                  width: double.infinity,
+                  height: 150,
                   fit: BoxFit.cover,
                 ),
                 SizedBox(height: 4),
                 Text(
                   productModel.name,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                ),
+                Text("${productModel.price}원"),
+                Text(
+                  "${productModel.reviewRating}(${productModel.reviewCont})",
                 ),
               ],
             ),
