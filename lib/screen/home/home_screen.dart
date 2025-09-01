@@ -1,4 +1,5 @@
 import 'package:commerce_202508/asset_path.dart';
+import 'package:commerce_202508/screen/home/home_widgets.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -55,6 +56,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               );
             }),
+          ),
+
+          SizedBox(height: 24),
+
+          HomeWidgets.shortcut(
+            iconList: [
+              AssetPath.jacket,
+              AssetPath.jumper,
+              AssetPath.necklace,
+              AssetPath.bag,
+              AssetPath.cap,
+              AssetPath.skirt,
+              AssetPath.trousers,
+              AssetPath.shirt,
+            ],
           ),
         ],
       ),
