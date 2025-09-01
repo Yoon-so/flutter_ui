@@ -47,12 +47,17 @@ class HomeWidgets {
     return SizedBox(
       height: 300,
       child: ListView.builder(
+        padding: EdgeInsets.symmetric(horizontal: 16),
         scrollDirection: Axis.horizontal,
         itemCount: dataList.length,
         itemBuilder: (context, index) {
           var productModel = dataList[index];
-          return SizedBox(
+          /// index = 0, 1, 2, 3, 4
+          /// dataList.length = 5;
+          bool lastIndex = index == dataList.length -1;
+          return Container(
             width: 150,
+            margin: EdgeInsets.only(right: lastIndex ? 0 : 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
